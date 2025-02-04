@@ -47,7 +47,7 @@ class MovieListSerializer(MovieSerializer):
     actors = serializers.SerializerMethodField()
 
     def get_actors(self, obj):
-        return [ actor.full_name for actor in obj.actors.all()]
+        return [actor.full_name for actor in obj.actors.all()]
 
 
 class MovieSessionSerializer(serializers.ModelSerializer):
